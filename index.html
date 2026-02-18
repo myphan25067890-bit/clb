@@ -6,6 +6,7 @@
 <title>CLB THPT Phú Mỹ - Xuân 2026</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 *{
@@ -36,7 +37,6 @@ nav{
 }
 
 nav .logo{
-    color:black;
     font-size:22px;
     font-weight:700;
 }
@@ -47,22 +47,48 @@ nav ul{
     gap:30px;
 }
 
+nav ul li{
+    position:relative;
+}
+
 nav ul li a{
     text-decoration:none;
     color:black;
-    transition:0.3s;
     font-weight:500;
+    transition:0.3s;
 }
 
 nav ul li a:hover{
     color:#b30000;
 }
 
+/* DROPDOWN */
+.dropdown{
+    display:none;
+    position:absolute;
+    top:35px;
+    left:0;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 10px 20px rgba(139,0,0,0.2);
+    overflow:hidden;
+}
+
+.dropdown a{
+    display:block;
+    padding:10px 20px;
+    white-space:nowrap;
+}
+
+nav ul li:hover .dropdown{
+    display:block;
+}
+
 /* HEADER */
 header{
     height:100vh;
     background:linear-gradient(rgba(139,0,0,0.75),rgba(139,0,0,0.75)),
-    url("https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b");
+    url("nen.jpg");
     background-size:cover;
     background-position:center;
     display:flex;
@@ -76,10 +102,6 @@ header{
 header h1{
     font-size:55px;
     letter-spacing:3px;
-}
-
-header p{
-    margin-top:20px;
 }
 
 /* SECTION */
@@ -99,10 +121,6 @@ section{
 }
 
 /* ABOUT */
-.about{
-    background:white;
-}
-
 .about::before{
     content:"✿ ✿ ✿";
     position:absolute;
@@ -116,7 +134,7 @@ section{
 
 /* CLUBS */
 .clubs{
-    background:#ffe6e6; /* đỏ pastel */
+    background:#ffe6e6;
 }
 
 .club-grid{
@@ -131,6 +149,8 @@ section{
     overflow:hidden;
     box-shadow:0 10px 25px rgba(139,0,0,0.15);
     transition:0.4s;
+    text-decoration:none;
+    color:black;
 }
 
 .club-card:hover{
@@ -152,10 +172,6 @@ section{
 }
 
 /* ACTIVITIES */
-.activities{
-    background:white;
-}
-
 .activities::after{
     content:"🐎 🐎 🐎";
     position:absolute;
@@ -225,11 +241,34 @@ footer{
     margin-bottom:15px;
 }
 
-footer p{
+.footer-column p{
     margin:8px 0;
 }
 
-/* Sticker & pattern */
+.footer-column a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-column a:hover{
+    color:#facc15;
+}
+
+.footer-column i{
+    margin-right:8px;
+    color:#facc15;
+}
+
+.footer-bottom{
+    margin-top:40px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.3);
+    padding-top:20px;
+    font-size:14px;
+    opacity:0.8;
+}
+
 footer::before{
     content:"🐎 ✿ 🐎 ✿ 🐎";
     position:absolute;
@@ -260,7 +299,15 @@ footer::after{
     <ul>
         <li><a href="#home">Trang Chủ</a></li>
         <li><a href="#about">Giới Thiệu</a></li>
-        <li><a href="#clubs">Câu Lạc Bộ</a></li>
+        <li>
+            <a href="#">Câu Lạc Bộ ▼</a>
+            <div class="dropdown">
+                <a href="nhay.html">CLB Nhảy - PMDC</a>
+                <a href="amnhac.html">CLB Âm Nhạc</a>
+                <a href="sach.html">CLB Sách</a>
+                <a href="bongro.html">CLB Bóng Rổ - PMBC</a>
+            </div>
+        </li>
         <li><a href="#activities">Hoạt Động</a></li>
     </ul>
 </nav>
@@ -268,7 +315,7 @@ footer::after{
 <header id="home">
     <div>
         <h1>CLB THPT PHÚ MỸ</h1>
-        <p>Xuân 2026 – Mạnh mẽ như ngựa phi 🐎</p>
+        <p>Xuân 2026 – Mã đáo thành công 🐎</p>
     </div>
 </header>
 
@@ -276,30 +323,45 @@ footer::after{
     <div class="section-title">
         <h2>Giới Thiệu</h2>
     </div>
-    <p>CLB là môi trường phát triển toàn diện, nơi mỗi học sinh được thể hiện bản thân và bứt phá trong năm mới 2026.</p>
+    <p>Các câu lạc bộ (CLB) trong trường học giữ một vai trò vô cùng quan trọng trong việc phát triển toàn diện học sinh. Không chỉ là nơi để thỏa mãn sở thích và đam mê, CLB còn tạo môi trường giúp học sinh rèn luyện kỹ năng mềm như giao tiếp, làm việc nhóm, tổ chức và lãnh đạo. Tham gia CLB giúp mỗi cá nhân trở nên tự tin hơn, năng động hơn và có cơ hội khám phá năng lực tiềm ẩn của bản thân. Bên cạnh đó, CLB còn góp phần xây dựng tinh thần đoàn kết, gắn bó giữa các thành viên, tạo nên một môi trường học tập tích cực và sáng tạo. Có thể nói, các CLB chính là “mảnh đất màu mỡ” nuôi dưỡng tài năng và giúp học sinh trưởng thành cả về kiến thức lẫn nhân cách.</p>
 </section>
 
-<section class="clubs" id="clubs">
+<section class="clubs">
     <div class="section-title">
-        <h2>Câu Lạc Bộ Nổi Bật</h2>
+        <h2>Các Câu Lạc Bộ Nổi Bật</h2>
     </div>
-
     <div class="club-grid">
-        <div class="club-card">
-            <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754">
+        <a href="nhay.html" class="club-card">
+            <img src="nhay.jpg">
             <div class="info">
-                <h3>CLB Văn Nghệ</h3>
-                <p>Thắp sáng sân khấu với những màn biểu diễn ấn tượng.</p>
+                <h3>CLB Nhảy - PMDC</h3>
+                <p>Truyền lửa đam mê với những màn biểu diễn ấn tượng.</p>
             </div>
-        </div>
+        </a>
 
-        <div class="club-card">
-            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+        <a href="amnhac.html" class="club-card">
+            <img src="amnhac.jpg">
             <div class="info">
-                <h3>CLB Thể Thao</h3>
-                <p>Năng động – mạnh mẽ – đoàn kết.</p>
+                <h3>CLB Âm Nhạc</h3>
+                <p>Nuôi dưỡng yêu thương bằng âm thanh.</p>
             </div>
-        </div>
+        </a>
+
+        <a href="sach.html" class="club-card">
+            <img src="sach.jpg">
+            <div class="info">
+                <h3>CLB Sách</h3>
+                <p>Thắp sáng tri thức qua từng con chữ.</p>
+            </div>
+        </a>
+
+        <a href="bongro.html" class="club-card">
+            <img src="bongro.jpg">
+            <div class="info">
+                <h3>CLB Bóng Rổ - PMBC</h3>
+                <p>Năng động – Mạnh mẽ – Đoàn kết.</p>
+            </div>
+        </a>
     </div>
 </section>
 
@@ -307,11 +369,9 @@ footer::after{
     <div class="section-title">
         <h2>Hoạt Động Sôi Nổi</h2>
     </div>
-
     <div class="activity-list">
-
         <div class="activity-item">
-            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622">
+            <img src="hoatdong1.jpg">
             <div class="activity-content">
                 <h3>Festival Xuân 2026</h3>
                 <p>Chương trình nghệ thuật chào năm mới rực rỡ.</p>
@@ -319,13 +379,12 @@ footer::after{
         </div>
 
         <div class="activity-item">
-            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+            <img src="hoatdong2.jpg">
             <div class="activity-content">
                 <h3>English Speaking Contest</h3>
                 <p>Cuộc thi tiếng Anh sáng tạo và chuyên nghiệp.</p>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -334,15 +393,31 @@ footer::after{
         <div class="footer-column">
             <h3>THPT Phú Mỹ</h3>
             <p>Bà Rịa - Vũng Tàu</p>
-            <p>Hotline: 0123 456 789</p>
-            <p>Email: clbphumy@gmail.com</p>
+            <p>Xuân 2026 – Mã đáo thành công 🐎</p>
         </div>
 
         <div class="footer-column">
-            <h3>Xuân 2026 🐎</h3>
-            <p>Ngựa phi bứt phá</p>
-            <p>Thành công rực rỡ</p>
+            <h3>Liên Hệ</h3>
+            <p>Email: clbphumy@gmail.com</p>
+            <p>
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/THPTPhuMy?locale=vi_VN" target="_blank">
+                    Facebook THPT Phú Mỹ
+                </a>
+            </p>
         </div>
+
+        <div class="footer-column">
+            <h3>Câu Lạc Bộ</h3>
+            <p><a href="nhay.html">CLB Nhảy - PMDC</a></p>
+            <p><a href="amnhac.html">CLB Âm Nhạc</a></p>
+            <p><a href="sach.html">CLB Sách</a></p>
+            <p><a href="bongro.html">CLB Bóng Rổ - PMBC</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 THPT Phú Mỹ | All Rights Reserved
     </div>
 </footer>
 
