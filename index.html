@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLB THPT Phú Mỹ - Xuân 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Playfair Display', serif;
+    background:#fffafa;
+    color:#222;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+nav .logo{
+    color:black;
+    font-size:22px;
+    font-weight:700;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#b30000;
+}
+
+/* HEADER */
+header{
+    height:100vh;
+    background:linear-gradient(rgba(139,0,0,0.75),rgba(139,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:0 20px;
+}
+
+header h1{
+    font-size:55px;
+    letter-spacing:3px;
+}
+
+header p{
+    margin-top:20px;
+}
+
+/* SECTION */
+section{
+    padding:100px 10%;
+    position:relative;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:38px;
+    color:#8b0000;
+}
+
+/* ABOUT */
+.about{
+    background:white;
+}
+
+.about::before{
+    content:"✿ ✿ ✿";
+    position:absolute;
+    top:40px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#facc15;
+    font-size:28px;
+    opacity:0.5;
+}
+
+/* CLUBS */
+.clubs{
+    background:#ffe6e6; /* đỏ pastel */
+}
+
+.club-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.club-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(139,0,0,0.15);
+    transition:0.4s;
+}
+
+.club-card:hover{
+    transform:translateY(-12px);
+}
+
+.club-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.club-card .info{
+    padding:25px;
+}
+
+.club-card h3{
+    color:#b30000;
+}
+
+/* ACTIVITIES */
+.activities{
+    background:white;
+}
+
+.activities::after{
+    content:"🐎 🐎 🐎";
+    position:absolute;
+    bottom:40px;
+    right:50%;
+    transform:translateX(50%);
+    font-size:28px;
+    opacity:0.15;
+}
+
+.activity-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+.activity-item{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(139,0,0,0.2);
+    transition:0.4s;
+}
+
+.activity-item:hover{
+    transform:translateY(-10px);
+}
+
+.activity-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.activity-content{
+    padding:25px;
+    text-align:center;
+}
+
+.activity-content h3{
+    color:#8b0000;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:linear-gradient(135deg,#8b0000,#b30000);
+    color:white;
+    padding:70px 10%;
+    position:relative;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.footer-column{
+    flex:1;
+    min-width:250px;
+}
+
+.footer-column h3{
+    color:#facc15;
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* Sticker & pattern */
+footer::before{
+    content:"🐎 ✿ 🐎 ✿ 🐎";
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:32px;
+    color:#facc15;
+    opacity:0.2;
+}
+
+footer::after{
+    content:"✿ ✿ ✿";
+    position:absolute;
+    bottom:15px;
+    right:40px;
+    font-size:28px;
+    color:#facc15;
+    opacity:0.3;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">THPT PHÚ MỸ</div>
+    <ul>
+        <li><a href="#home">Trang Chủ</a></li>
+        <li><a href="#about">Giới Thiệu</a></li>
+        <li><a href="#clubs">Câu Lạc Bộ</a></li>
+        <li><a href="#activities">Hoạt Động</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <div>
+        <h1>CLB THPT PHÚ MỸ</h1>
+        <p>Xuân 2026 – Mạnh mẽ như ngựa phi 🐎</p>
+    </div>
+</header>
+
+<section class="about" id="about">
+    <div class="section-title">
+        <h2>Giới Thiệu</h2>
+    </div>
+    <p>CLB là môi trường phát triển toàn diện, nơi mỗi học sinh được thể hiện bản thân và bứt phá trong năm mới 2026.</p>
+</section>
+
+<section class="clubs" id="clubs">
+    <div class="section-title">
+        <h2>Câu Lạc Bộ Nổi Bật</h2>
+    </div>
+
+    <div class="club-grid">
+        <div class="club-card">
+            <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754">
+            <div class="info">
+                <h3>CLB Văn Nghệ</h3>
+                <p>Thắp sáng sân khấu với những màn biểu diễn ấn tượng.</p>
+            </div>
+        </div>
+
+        <div class="club-card">
+            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b">
+            <div class="info">
+                <h3>CLB Thể Thao</h3>
+                <p>Năng động – mạnh mẽ – đoàn kết.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="activities" id="activities">
+    <div class="section-title">
+        <h2>Hoạt Động Sôi Nổi</h2>
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622">
+            <div class="activity-content">
+                <h3>Festival Xuân 2026</h3>
+                <p>Chương trình nghệ thuật chào năm mới rực rỡ.</p>
+            </div>
+        </div>
+
+        <div class="activity-item">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
+            <div class="activity-content">
+                <h3>English Speaking Contest</h3>
+                <p>Cuộc thi tiếng Anh sáng tạo và chuyên nghiệp.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>THPT Phú Mỹ</h3>
+            <p>Bà Rịa - Vũng Tàu</p>
+            <p>Hotline: 0123 456 789</p>
+            <p>Email: clbphumy@gmail.com</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Xuân 2026 🐎</h3>
+            <p>Ngựa phi bứt phá</p>
+            <p>Thành công rực rỡ</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
